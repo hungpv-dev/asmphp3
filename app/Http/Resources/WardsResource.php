@@ -1,0 +1,26 @@
+<?php
+
+namespace App\Http\Resources;
+
+use Illuminate\Http\Request;
+use Illuminate\Http\Resources\Json\JsonResource;
+
+class WardsResource extends JsonResource
+{
+    /**
+     * Transform the resource into an array.
+     *
+     * @return array<string, mixed>
+     */
+    public function toArray(Request $request): array
+    {
+        return [
+            "code" => $this->code,
+            "name" => $this->name,
+            "full_name" => $this->full_name,
+            "code_name" => $this->code_name,
+            "district_code" => $this->district_code,
+            "administrative_unit_id" => $this->administrative_unit_id
+        ];
+    }
+}
